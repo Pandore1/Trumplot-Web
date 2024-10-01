@@ -21,17 +21,17 @@ public class Notebook : MonoBehaviour
     {
         
     }
+    public void HoneyPotClick()
+    {
+        FoundProof("pot de miel", "blabla");
+    }
 
-
-    public void  FoundProof(string proofName, string proofDesc)
+    public void  FoundProof(string proofName,string proofDesc)
     {
         GameObject _newProof = Instantiate(_proofPrefab, _proofListContainer);
-
-        Transform _newProofName = _newProof.gameObject.transform.Find("ProofName");
+        _proofName.text =proofName;
+        _proofDesc.text =proofDesc;
         
-        Transform _newProofDesc = _newProof.gameObject.transform.Find("ProofDesc");
-        _newProofName.gameObject.GetComponent<TMPro.TMP_Text>().text = proofName;
-        _newProofDesc.gameObject.GetComponent<TMPro.TMP_Text>().text=proofDesc;
     
         _proofList.Add(_newProof);
     }
