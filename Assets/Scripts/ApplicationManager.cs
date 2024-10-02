@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ApplicationManager : MonoBehaviour
 {
     public static ApplicationManager Instance;
+    
     [SerializeField] private KeyCode _quitKey=KeyCode.Escape;
+    [SerializeField] private GameObject _policeBtn;
+    [SerializeField] private GameObject _townBtn;
+
+
+    public Notebook _noteBookScript;
 
     private void Awake()
     {
@@ -30,6 +38,18 @@ public class ApplicationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "PoliceStation")
+        {
+            _townBtn.SetActive(true);
+            _policeBtn.SetActive(false);
+        }
+        else if (scene.name == "Town")
+        {
+            _policeBtn.SetActive(true);
+            _townBtn.SetActive(false);
+        }
+     
         if (Input.GetKeyUp(_quitKey))
         {
             Quit();

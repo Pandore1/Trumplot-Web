@@ -7,15 +7,7 @@ using UnityEngine.EventSystems;
 public class Examination : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]private string _examinationLines;
-
-    /*
-     0: Kevin
-     1: Karim
-     2: Kay
-     3: Karen
-     4:Kristine
-     */
+    private string _examinationLines;
     [SerializeField] private TMPro.TMP_Text _examinationComponent;
     [SerializeField] private GameObject _examinationCanva;
     [SerializeField] private float _examinationSpeed = 0.5f;
@@ -23,7 +15,7 @@ public class Examination : MonoBehaviour
     private string _judgeSuspect;
 
     [SerializeField] List<SuspectInfos> infos;
-    private int _index;
+
 
     void Start()
     {
@@ -56,10 +48,10 @@ public class Examination : MonoBehaviour
         SuspectJudgement newEvidenceSuspect = newInfos.OtherSuspects.Find(judgementSuspect => judgementSuspect.Evidence);
         if (newEvidenceSuspect != null && newEvidenceSuspect.Evidence)
         {
-            GameManager.Instance._noteBookScript.FoundEvidence((_speakSuspect + " - " + _judgeSuspect), newJudgement.Judgement);
+            ApplicationManager.Instance._noteBookScript.FoundEvidence((_speakSuspect + " - " + _judgeSuspect), newJudgement.Judgement);
         }
         _examinationLines = newJudgement.Judgement;
-        _index = 0;
+      
         _examinationCanva.SetActive(true);
        
         StartCoroutine(TypeDialogue());

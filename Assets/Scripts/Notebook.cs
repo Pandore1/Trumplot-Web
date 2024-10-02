@@ -10,11 +10,7 @@ public class Notebook : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text _evidenceDesc;
     [SerializeField] private List<GameObject> _evidenceList;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  
 
     // Update is called once per frame
     void Update()
