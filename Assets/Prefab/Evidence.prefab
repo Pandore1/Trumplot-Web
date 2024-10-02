@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6742450120944893609}
   - component: {fileID: 873134144071381472}
   m_Layer: 5
-  m_Name: Proof
+  m_Name: Evidence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5514569501226252455}
   - component: {fileID: 7443938967813724966}
   m_Layer: 5
-  m_Name: ProofTitle
+  m_Name: EvidenceTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 5840843946760241881}
   - component: {fileID: 4925316069197953681}
   m_Layer: 5
-  m_Name: ProofDesc
+  m_Name: EvidenceDesc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Notebook : MonoBehaviour
 {
-    [SerializeField] private GameObject _proofPrefab;
-    [SerializeField] private Transform _proofListContainer;
-    [SerializeField] private TMPro.TMP_Text _proofName;
-    [SerializeField] private TMPro.TMP_Text _proofDesc;
-    [SerializeField] private List<GameObject> _proofList;
+    [SerializeField] private GameObject _evidencePrefab;
+    [SerializeField] private Transform _evidenceListContainer;
+    [SerializeField] private TMPro.TMP_Text _evidenceName;
+    [SerializeField] private TMPro.TMP_Text _evidenceDesc;
+    [SerializeField] private List<GameObject> _evidenceList;
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +23,16 @@ public class Notebook : MonoBehaviour
     }
     public void HoneyPotClick()
     {
-        FoundProof("pot de miel", "blabla");
+        FoundEvidence("pot de miel", "blabla");
     }
 
-    public void  FoundProof(string proofName,string proofDesc)
+    public void  FoundEvidence(string evidenceName,string evidenceDesc)
     {
-        GameObject _newProof = Instantiate(_proofPrefab, _proofListContainer);
-        _proofName.text =proofName;
-        _proofDesc.text =proofDesc;
+        GameObject _newEvidence = Instantiate(_evidencePrefab, _evidenceListContainer);
+        _evidenceName.text =evidenceName;
+        _evidenceDesc.text =evidenceDesc;
         
     
-        _proofList.Add(_newProof);
+        _evidenceList.Add(_newEvidence);
     }
 }
