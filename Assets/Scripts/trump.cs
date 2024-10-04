@@ -28,10 +28,10 @@ public class trump : MonoBehaviour
         float scaleX=transform.localScale.x;
         if (_dirX > 0)
         {
-            scaleX = -1f;
+            scaleX = 1f;
         }
         else if (_dirX < 0) {
-            scaleX = 1f;
+            scaleX = -1f;
         }
         transform.localScale=new Vector3(scaleX,1,1);
 

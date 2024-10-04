@@ -8,11 +8,10 @@ using UnityEngine.UI;
 public class ApplicationManager : MonoBehaviour
 {
     public static ApplicationManager Instance;
-    
+   
     [SerializeField] private KeyCode _quitKey=KeyCode.Escape;
     [SerializeField] private GameObject _policeBtn;
     [SerializeField] private GameObject _townBtn;
-
 
     public Notebook _noteBookScript;
 
@@ -22,7 +21,7 @@ public class ApplicationManager : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             //sinon on la detryut
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
         Instance = this;//affectation de l'instance
@@ -49,11 +48,21 @@ public class ApplicationManager : MonoBehaviour
             _policeBtn.SetActive(true);
             _townBtn.SetActive(false);
         }
-     
+        
+        else
+        {
+            _policeBtn.SetActive(true);
+            _townBtn.SetActive(true);
+
+        }
         if (Input.GetKeyUp(_quitKey))
         {
             Quit();
         }
+    }
+    public void SwitchScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
     public void Quit()
     {

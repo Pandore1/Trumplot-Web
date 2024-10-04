@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2580012109110173243}
   - component: {fileID: 2649589062132187597}
   - component: {fileID: 1360507160297352300}
+  - component: {fileID: 7607305683639545200}
+  - component: {fileID: 3553035323444358030}
   m_Layer: 5
   m_Name: SuspectBtn
   m_TagString: SuspectLineup
@@ -119,4 +121,76 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2649589062132187597}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7607305683639545200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677761246562516065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0070657554affe9468dd8ecf5101ab2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clickable: {fileID: 2800000, guid: 8219bfdc2f8e07c4087a040ba8777203, type: 3}
+  _default: {fileID: 2800000, guid: 73492e0b9a7c30b49ad9d79d0e912b1c, type: 3}
+  hotSpot: {x: 0, y: 0}
+--- !u!114 &3553035323444358030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677761246562516065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2376878991145368187, guid: 181885011e10fe0458771deb838c07b9, type: 3}
+          m_TargetAssemblyTypeName: CursorControl, Assembly-CSharp
+          m_MethodName: OnMouseOverButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2376878991145368187, guid: 181885011e10fe0458771deb838c07b9, type: 3}
+          m_TargetAssemblyTypeName: CursorControl, Assembly-CSharp
+          m_MethodName: OnMouseExitButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

@@ -17,10 +17,7 @@ public class Notebook : MonoBehaviour
     {
         
     }
-    public void HoneyPotClick()
-    {
-        FoundEvidence("pot de miel", "blabla");
-    }
+   
 
     public void  FoundEvidence(string evidenceName,string evidenceDesc)
     {
